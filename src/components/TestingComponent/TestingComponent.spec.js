@@ -108,11 +108,6 @@ describe('<TestingComponent />', () => {
 				).toBe('Login');
 			});
 
-			it('first `<input>` element should be required', () => {
-				expect(
-					wrapper.find('form').childAt(0).props().required
-				).toBe(true);
-			});
 
 			//second input
 

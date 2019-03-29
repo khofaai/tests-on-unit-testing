@@ -58,8 +58,7 @@ class TestingComponent extends Component {
 					type="text"
 					name="Login"
 					placeholder="Login"
-					required
-					value={this.state.fields.name || ''}
+					// value={this.state.fields.name || ''}
 					onChange={(e) => this.onInputChange(e)}
 				/>
 				<br />
@@ -67,11 +66,13 @@ class TestingComponent extends Component {
 					type="password"
 					name="password"
 					placeholder="Password"
-					required
 					onChange={(e) => this.onInputChange(e)}
 				/>
 				<br />
 				<button type="submit">Submit</button>
+				<p className="error">
+       			   {this.state.fieldErrors.name}
+      			</p>
 			</form>
 		);
 	}
